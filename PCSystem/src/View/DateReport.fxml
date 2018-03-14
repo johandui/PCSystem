@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.DateReportController">
+   <top>
+      <HBox prefHeight="38.0" prefWidth="544.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <DatePicker fx:id="date1" />
+            <DatePicker fx:id="date2" />
+            <Button mnemonicParsing="false" onAction="#handle_search" prefHeight="27.0" prefWidth="141.0" text="ХАЙХ" />
+         </children>
+      </HBox>
+   </top>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <center>
+      <VBox prefHeight="306.0" prefWidth="544.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tbview" prefHeight="321.0" prefWidth="544.0">
+              <columns>
+                <TableColumn fx:id="pcCount" prefWidth="76.0" text="АВСАН" />
+                  <TableColumn fx:id="pcTime" prefWidth="212.0" text="АВСАН ӨДӨР" />
+                  <TableColumn fx:id="pcProfit" prefWidth="145.0" text="АШИГ" />
+              </columns>
+            </TableView>
+            <LineChart fx:id="chart">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

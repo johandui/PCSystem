@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ReportController">
+   <children>
+      <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="601.0">
+         <content>
+            <VBox prefHeight="529.0" prefWidth="593.0">
+               <children>
+                  <ChoiceBox fx:id="cbox" prefHeight="27.0" prefWidth="609.0" />
+                  <TableView fx:id="tbview" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnPC" prefWidth="45.0" text="PC" />
+                      <TableColumn fx:id="tableColumnProfit" prefWidth="105.0" text="АШИГ" />
+                        <TableColumn fx:id="tableColumnCount" prefWidth="198.0" text="Хэдэн удаа нээсэн" />
+                        <TableColumn fx:id="tableColumnTime" prefWidth="245.0" text="Нийт ажилласан цаг" />
+                    </columns>
+                  </TableView>
+                  <BarChart fx:id="barChart">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAxis" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>

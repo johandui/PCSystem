@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MonthReportController">
+   <children>
+      <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="601.0">
+         <content>
+            <VBox prefHeight="529.0" prefWidth="593.0">
+               <children>
+                  <ChoiceBox fx:id="cbox" prefHeight="27.0" prefWidth="627.0" />
+                  <TableView fx:id="tbview" prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="tableColumnNum" prefWidth="45.0" text="No" />
+                        <TableColumn fx:id="tableColumnTime" prefWidth="139.0" text="Огноо/сар, жил/" />
+                        <TableColumn fx:id="tableColumnProfit" prefWidth="164.0" text="Нийт ашиг" />
+                        <TableColumn fx:id="tableColumnCount" prefWidth="245.0" text="Нээлгэсэн тоо" />
+                     </columns>
+                  </TableView>
+                  <LineChart fx:id="lineChart" prefHeight="326.0" prefWidth="593.0">
+                    <xAxis>
+                      <CategoryAxis fx:id="yAxis" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" fx:id="xAxis" />
+                    </yAxis>
+                  </LineChart>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>

@@ -1,0 +1,9 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#gradient {
+    -fx-background-color:
+        linear-gradient( #243B55 50%, #141E30 100%);
+
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) ,
+                1, 0.0 , 0 , 1);
+}

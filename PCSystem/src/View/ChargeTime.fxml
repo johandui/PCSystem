@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="327.0" prefWidth="480.0" style="-fx-background-color: #d8ca4b;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ChargeTimeController">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <BorderPane.margin>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </BorderPane.margin>
+         <children>
+            <TextField fx:id="time" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ХУГАЦАА" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ТӨРӨЛ" />
+            <ChoiceBox fx:id="cbox" prefWidth="195.0" style="-fx-background-color: #FFF;" GridPane.columnIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ҮНИЙН ДҮН" GridPane.rowIndex="2" />
+            <TextField fx:id="price" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#handleOk" prefHeight="42.0" prefWidth="135.0" style="-fx-background-color: #FFF;" text="Сунгах" GridPane.rowIndex="3" />
+            <Button maxHeight="42.0" maxWidth="135.0" mnemonicParsing="false" onAction="#handleCancel" style="-fx-background-color: #FFF;" text="Болих" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane id="gradient" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="406.0" minWidth="714.0" prefHeight="406.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Controller">
+   <top>
+      <MenuBar style="-fx-background-color: #e1e7f2;" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Үндсэн цэс">
+            <items>
+              <MenuItem fx:id="addPCbtn" mnemonicParsing="false" onAction="#addPC" text="PC нэмэх" />
+                  <MenuItem mnemonicParsing="false" onAction="#changePrice" text="Үнэ өөрчлөх" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Тайлан">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showReport" text="PC" />
+                  <MenuItem mnemonicParsing="false" onAction="#showMonthReport" text="Жил, сар" />
+                  <MenuItem mnemonicParsing="false" onAction="#showDateReport" text="Огноо" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Тусламж">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <GridPane style="-fx-background-color: #3f5477;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="85.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="115.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="29.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="imgView" fitHeight="126.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+               <GridPane.margin>
+                  <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../../../../Downloads/computer.png" />
+               </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PC" textAlignment="CENTER" wrappingWidth="100.56396484375" GridPane.rowIndex="1">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Text>
+            <Text fx:id="pcNumber" fill="#cdcdcd" strokeType="OUTSIDE" strokeWidth="0.0" text="#" wrappingWidth="101.21875" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ТӨРӨЛ" wrappingWidth="101.21875" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="pcName" fill="#cdcdcd" strokeType="OUTSIDE" strokeWidth="0.0" text="#" wrappingWidth="101.21875" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ЦАГ" wrappingWidth="100.25390625" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="pcCount" fill="#cdcdcd" strokeType="OUTSIDE" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="АВСАН" wrappingWidth="65.21875" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Text>
+            <Text fx:id="pcTime" fill="#cdcdcd" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="11.0" />
+               </font></Text>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="20.0" right="10.0" top="20.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </left>
+   <bottom>
+      <GridPane hgap="15.0" prefHeight="34.0" prefWidth="674.0" style="-fx-background-color: #3f5477;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="50.0" percentWidth="100.0" prefWidth="8.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="50.0" percentWidth="100.0" prefWidth="8.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="50.0" percentWidth="100.0" prefWidth="8.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="50.0" percentWidth="100.0" prefWidth="8.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <Button fx:id="btn_change" blendMode="ADD" minWidth="150.0" mnemonicParsing="false" onAction="#changePC" style="-fx-background-color: #FFF;" text="ШИЛЖҮҮЛЭХ" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" />
+            <Button fx:id="btn_time" blendMode="ADD" minWidth="150.0" mnemonicParsing="false" onAction="#addTime" style="-fx-background-color: #fff;" text="ЦАГ АВАХ" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" />
+            <Button fx:id="btn_charge" blendMode="ADD" minWidth="150.0" mnemonicParsing="false" onAction="#chargeTime" style="-fx-background-color: #FFF;" text="ЦАГ СУНГАХ" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" />
+            <Button fx:id="btn_close" blendMode="ADD" minWidth="150.0" mnemonicParsing="false" onAction="#closePC" style="-fx-background-color: #FFF;" text="ХААХ" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </GridPane>
+   </bottom>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3f5477;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab style="-fx-background-color: #FFF;" text="VIP">
+               <content>
+                  <FlowPane fx:id="flowPaneVIP" hgap="20.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </FlowPane>
+               </content>
+          </Tab>
+          <Tab style="-fx-background-color: #FFF;" text="ЭНГИЙН">
+               <content>
+                  <FlowPane fx:id="flowPane" hgap="20.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </FlowPane>
+               </content>
+          </Tab>
+        </tabs>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+         <effect>
+            <Blend />
+         </effect>
+      </TabPane>
+   </center>
+</BorderPane>
